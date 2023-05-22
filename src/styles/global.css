@@ -122,38 +122,15 @@ body {
 
   --headerblue: #a1bfd7;
   --colorPlaceholder: #989898;
-  /* primary btn */
-  --ctaPrimaryBgColor: #bd492f;
-  --ctaPrimaryTextColor: #ffffff;
-  --ctaPrimaryBorderRadius: 20px;
-  --ctaPrimaryWidth: 190px;
-  --ctaPrimaryHeight: 55px;
-  --ctaHover: 110%;
 
-  /* seconday btn */
-  --ctaSecondaryBgColor: #ffffff;
-  --ctaSecondaryBorderColor: #bd492f;
-  --ctaSecondaryBorderRadius: 20px;
-  --ctaSecondaryTextColor: #bd492f;
-  --ctaSecondaryWidth: 277px;
-  --ctaSecondaryHeight: 51px;
-  --ctaHover: 110%;
-
-  /* tertiary btn */
-  --ctaTertiaryBgColor: #ffffff;
-  --ctaTertiaryBorderColor: none;
-  --ctaTertiaryBorderRadius: 20px;
-  --ctaTertiaryTextColor: #bd492f;
-  --ctaTertiaryTextDecoration: underline;
-  --ctaTertiaryWidth: auto;
-  --ctaTertiaryHeight: auto;
-  --ctaHover: 110%;
-
-  /* ghost btn */
-  --ctaGhostTextColorOrange: #bd492f;
-  --ctaGhostTextColorGreen: #5b7f58;
-  --ctaGhostyWidth: auto;
-  --ctaGhostHeight: auto;
+  /*  btn */
+  --ctaHover: 105%;
+  --ctaColorWhite: #ffffff;
+  --ctaColorRed: #bd492f;
+  --ctaBorderRadius: 9999px;
+  --ctaColorBlack: #000;
+  --ctaTextDecoration: underline;
+  --ctaColorGreen: #5b7f58;
 
   /* Hover */
   --btnAnimation: ease-in;

@@ -1,0 +1,34 @@
+---
+import Button from "../components/Button.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <main class="px-5">
+      <h1>hej</h1>
+      <section class="pt-6">
+        <Button link="www.google.dk" variant="primary" size="base" style="white">Læs mere</Button>
+        <Button link="www.google.dk" variant="secondary" size="big" style="red">fortsæt med at handle</Button>
+        <Button link="www.google.dk" variant="primary" size="base" style="white">Læs mere</Button>
+        <Button link="www.google.dk" variant="secondary" size="big" style="red">fortsæt med at handle</Button>
+        <Button link="www.google.dk" variant="tertiary" style="black">hej</Button>
+        <Button link="www.google.dk" variant="tertiary" style="red">hej</Button>
+        <Button link="www.google.dk" variant="ghost" style="green">hej</Button>
+        <Button link="www.google.dk" variant="ghost" style="red">hej</Button>
+        <Button link="www.google.dk" variant="tags" style="white" size="tags">hej</Button>
+      </section>
+    </main>
+  </body>
+</html>
+<style>
+  main {
+    background-color: yellow;
+  }
+</style>
