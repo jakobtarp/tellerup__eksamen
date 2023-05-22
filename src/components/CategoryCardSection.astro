@@ -1,0 +1,21 @@
+---
+import CategoryCard from "./CategoryCard.astro";
+const { hasBadge } = Astro.props;
+---
+
+<section class="grid gap-3">
+  <ul>
+    <div class="grid grid-cols-5 gap-3 mr-3 ml-3">
+      <CategoryCard caption="København" header="DK Comics">
+        <img src="imgs/tintin_192x166.png" alt="" />
+      </CategoryCard>
+    </div>
+  </ul>
+  <ul>
+    <div class="grid grid-cols-5 gap-3 mr-3 ml-3">
+      <CategoryCard header="DK Comics">
+        <img src="imgs/tintin_192x166.png" alt="" />
+      </CategoryCard>
+    </div>
+  </ul>
+</section>

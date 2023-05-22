@@ -1,0 +1,50 @@
+---
+import Cardsearch from "./Cardsearch.astro";
+---
+
+<section class="cards bg-white">
+  <ul>
+    <header>
+      <h2 class="text-white p-4 text-2xl font-bold">Focus</h2>
+    </header>
+    <div class="grid grid-cols-5 gap-3 mr-3 ml-3">
+      <Cardsearch newBadge={true} header="Peaceful Piano" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        <img src="imgs/peaceful_piano.jpeg" alt="" />
+      </Cardsearch>
+      <Cardsearch newBadge={false} header="Deep focus" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        <img src="imgs/deep_focus.jpeg" alt="" />
+      </Cardsearch>
+      <Cardsearch newBadge={false} header="Instrumental study" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        <img src="imgs/instrumental_study.jpeg" alt="" />
+      </Cardsearch>
+      <Cardsearch newBadge={true} header="Day dreamer" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        <img src="imgs/day_dreamer.jpeg" alt="" />
+      </Cardsearch>
+      <Cardsearch newBadge={false} header="Focus flow" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        <img src="imgs/focus_flow.jpeg" alt="" />
+      </Cardsearch>
+    </div>
+  </ul>
+  <ul>
+    <header>
+      <h2 class="text-white p-4 text-2xl font-bold bg-gray-900">Spotify Playlists</h2>
+    </header>
+    <div class="grid grid-cols-5 gap-3 mr-3 ml-3">
+      <Cardsearch header="Chill hits" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        <img src="imgs/chill_hits.jpeg" alt="" />
+      </Cardsearch>
+      <Cardsearch header="Jazz vibes" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        <img src="imgs/jazz_vibes.jpeg" alt="" />
+      </Cardsearch>
+      <Cardsearch header="Rap caviar" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        <img src="imgs/rap_caviar.jpeg" alt="" />
+      </Cardsearch>
+      <Cardsearch header="Reading adventure" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        <img src="imgs/reading_adventure.jpeg" alt="" />
+      </Cardsearch>
+      <Cardsearch header="All out 2010's" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        <img src="imgs/all_out_2010s.jpeg" alt="" />
+      </Cardsearch>
+    </div>
+  </ul>
+</section>

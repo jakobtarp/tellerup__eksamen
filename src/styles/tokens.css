@@ -1,0 +1,111 @@
+/**
+ * Do not edit directly
+ * Generated on Wed, 03 May 2023 13:41:44 GMT
+ */
+
+body {
+  background-color: var(--defaultBgColor);
+}
+
+:root {
+  --red: #f2474b; /* Udsolgt / Nyhed / Tilbudspris */
+  --green: #23bc70; /* Kurv / På lager */
+  --black: #0e0f11;
+  --red: #f2474b;
+  --white: #ffffff;
+  --yellow: #efd17a;
+  --grey: #828282;
+  --xs: 4px;
+  --sm: 8px;
+  --md: 12px;
+  --lg: 16px;
+  --xl: 24px;
+  --2xl: 40px;
+  --3xl: 48px;
+  --4xl: 56px;
+  --5xl: 64px;
+  --6xl: 72px;
+  --7xl: 110px;
+  --shadowSm: 1px 1px 2px 0 rgba(0, 0, 0, 0.31);
+  --shadowMd: 2px 2px 4px 0 rgba(0, 0, 0, 0.31);
+  --shadowLg: 3px 3px 4px 0 rgba(0, 0, 0, 0.31);
+  --shadowXl: 4px 4px 4px 0 rgba(0, 0, 0, 0.31);
+  --shadowTest: 0 4px 10px 0 rgba(113, 113, 113, 0.5);
+  --shadowInnerDefault: inset 7px 5px 6px 0 rgba(240, 240, 240, 0.35);
+  --border2: 2px solid #0e0f11;
+  --border4: 4px solid #0e0f11;
+  --border8: 8px solid #0e0f11;
+  --roundedSm: 2px;
+  --roundedMd: 6px;
+  --roundedLg: 8px;
+  --roundedFull: 999px;
+  --roundedXl: 16px;
+  --fontThin: 100;
+  --fontExtralight: 200;
+  --fontLight: 300;
+  --fontNormal: 400;
+  --fontMedium: 500;
+  --fontSemibold: 600;
+  --fontBold: 700;
+  --fontExtrabold: 800;
+  --fontBlack: 900;
+  --fontSm: 11.2px;
+  --fontBase: 14px;
+  --fontLg: 17.5px;
+  --fontXl: 21.88px;
+  --font2xl: 27.34px;
+  --font3xl: 34.18px;
+  --font4xl: 42.72px;
+  --font5xl: 53.41px;
+  --fontRoboto: Roboto;
+  --fontComic: Comic Neue;
+  --leadingTight: 1.2;
+  --leadingDefault: 1.5;
+  --leadingLoose: 1.8;
+  --textNone: none;
+  --textUnderline: underline;
+  --textLineThrough: line-through;
+  --greyDark: #525252;
+  --spacingNone: 0;
+  --border1: 1px undefined undefined;
+  --lysLysGrey: #d4d4d5;
+  --border15: 1.5px solid #525252;
+  --dropShadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  --bgGrey: #f9f9f9;
+  --shadowDefault: 0px 4px 10px 0 rgba(113, 113, 113, 0.5);
+  --ctaPrimaryBgColor: #0e0f11;
+  --ctaSecondaryBgColor: #23bc70;
+  --ctaTertiaryBgColor: #ffffff;
+  --ctaPrimaryTekstColor: #ffffff;
+  --defaultBgColor: #f9f9f9;
+  --primaryTekstColor: #0e0f11;
+  --secondaryTekstColor: #828282;
+  --tertiaryTekstColor: #f2474b;
+  --gradientBgColor: linear-gradient(0deg, #efd17a 0%, #f9f9f9 100%);
+  --defaultBorder: 1.5px solid #525252;
+  --ctaPrimaryBorderRadius: 6px;
+  --ctaSecondaryBorderRadius: 16px;
+  --cardBorderRadius: 8px;
+  --inputBorderRadius: 999px;
+  --gapSpacing: 12px;
+  --primaryXSpacing: 16px;
+  --ySpacing: 8px;
+  --allSpacing: 8px;
+  --secondaryXSpacing: 64px;
+  --primary: Roboto;
+  --secondary: Comic Neue;
+  --tertiaryXSpacing: 25px;
+  --primaryFontWeight: 400;
+  --secondaryFontWeight: 500;
+  --tertiaryFontWeight: 700;
+  --primaryLineHeight: 1.5;
+  --secondaryLineHeight: 1.2;
+  --tertiaryLineHeight: 1.8;
+  --baseFontSize: 14px;
+  --lgFontSize: 17.5px;
+  --xlFontSize: 21.88px;
+  --2xlFontSize: 27.34px;
+  --3xlFontSize: 34.18px;
+  --secondaryYSpacing: 12px;
+  --cardBgColor: #ffffff;
+}

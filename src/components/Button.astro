@@ -1,0 +1,40 @@
+---
+const { link, variant } = Astro.props;
+---
+
+<a href={link} data-variant={variant}>
+  <slot />
+</a>
+
+<style>
+  a {
+  }
+
+  [data-variant="primary"] {
+    background: white;
+    color: black;
+    text-decoration: none;
+    border: 0;
+    border-radius: 999px;
+    padding: 0.8rem 2rem;
+    display: inline-block;
+    font-weight: 600;
+  }
+
+  [data-variant="secondary"] {
+    background: var(--secondary);
+    color: gray;
+    text-decoration: none;
+    border: 0;
+    border-radius: 999px;
+    padding: 0.75rem 1.5rem;
+    display: inline-block;
+    font-weight: 600;
+  }
+
+  [data-variant="ghost"] {
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+  }
+</style>

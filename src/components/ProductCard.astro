@@ -1,0 +1,112 @@
+---
+import "../styles/tokens.css";
+import "../styles/base.css";
+const { titel, imgPath, description, price, discount1, discount2, discount3, shipping, newBadge, link } = Astro.props;
+
+import Button from "./Button.astro";
+---
+
+<article class="mb-20 mt-20 w-[18.125rem]">
+  {newBadge && <p class="badge mr-auto">NYHED</p>}
+  <img class="imgradius" src={imgPath} alt="" height="320" width="620" />
+
+  <h3 class="titel">{titel}</h3>
+  <p class="description">{description}</p>
+  <p class="price">{price}</p>
+  <div class="flex">
+    <p class="discount1">{discount1}</p>
+    <p class="discount2">{discount2}</p>
+    <p class="discount3">{discount3}</p>
+  </div>
+  <div class="flex justify-between">
+    <div class="button1 flex">
+      <img class="h-6 mr-2" src="imgs/shopping-cart.png" alt="" />
+      <a href={link} data-variant={"primary"}>
+        <p>Læg i kurv</p>
+      </a>
+    </div>
+    <p class="shipping mt-auto">{shipping}</p>
+  </div>
+</article>
+
+<style>
+  article {
+    border-radius: var(--cardBorderRadius);
+    box-shadow: var(--shadowDefault);
+    background-color: var(--cardBgColor);
+    color: var(--primaryTekstColor);
+    font-family: var(--primary);
+  }
+
+  h3 {
+    padding: var(--sm);
+    font-weight: var(--secondaryFontWeight);
+    line-height: var(--primaryLineHeight);
+    margin-bottom: var(--xs);
+  }
+
+  .description {
+    padding-left: var(--sm);
+    font-weight: var(--primaryFontWeight);
+    line-height: var(--secondaryLineHeight);
+    margin-bottom: var(--xl);
+  }
+
+  .price {
+    font-weight: var(--secondaryFontWeight);
+    font-size: var(--xlFontSize);
+    padding-left: var(--sm);
+    color: var(--tertiaryTekstColor);
+    line-height: var(--primaryLineHeight);
+  }
+
+  .discount1 {
+    padding-left: var(--sm);
+    font-weight: var(--primaryFontWeight);
+    line-height: var(--primaryLineHeight);
+    font-size: var(--baseFontSize);
+  }
+  .discount2 {
+    padding-left: var(--sm);
+    font-weight: var(--primaryFontWeight);
+    line-height: var(--primaryLineHeight);
+    font-size: var(--baseFontSize);
+    text-decoration: var(--textLineThrough);
+  }
+  .discount3 {
+    padding-left: var(--sm);
+    font-weight: var(--primaryFontWeight);
+    line-height: var(--primaryLineHeight);
+    font-size: var(--baseFontSize);
+    color: var(--tertiaryTekstColor);
+    margin-bottom: var(--lg);
+  }
+
+  .shipping {
+    padding: var(--sm);
+    font-size: var(--fontBase);
+    font-weight: var(--primaryFontWeight);
+  }
+
+  .button1 {
+    margin: var(--sm);
+    background-color: var(--ctaSecondaryBgColor);
+    padding-left: var(--primaryXSpacing);
+    padding-right: var(--primaryXSpacing);
+    padding-top: var(--gapSpacing);
+    padding-bottom: var(--gapSpacing);
+    border-radius: var(--ctaPrimaryBorderRadius);
+    color: var(--ctaTertiaryBgColor);
+    font-family: var(--fontRoboto);
+  }
+
+  .badge {
+    background-color: var(--ctaSecondaryBgColor);
+    font-family: var(--fontRoboto);
+    font-weight: var(--secondaryFontWeight);
+    text-align: center;
+    border-top-left-radius: var(--cardBorderRadius);
+    border-top-right-radius: var(--cardBorderRadius);
+    color: var(--ctaPrimaryTekstColor);
+  }
+</style>
