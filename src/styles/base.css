@@ -1,7 +1,6 @@
 body {
   line-height: max(1.6em, 1em + 1ex);
-
-  font-family: system-ui, sans-serif;
+  font-family: Montserrat, sans-serif;
   background-color: var(--defaultBgColor);
 }
 html,
@@ -9,9 +8,6 @@ body {
   height: 100% !important;
 }
 
-body > :is(header, main, footer) {
-  padding-inline: max((100% - 1280px) / 2, 1rem);
-}
 
 [data-icon] {
   width: 2.5rem;
