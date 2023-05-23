@@ -3,7 +3,6 @@ import MainLayout from "../layouts/MainLayout.astro";
 import MainHeader from "../components/MainHeader.astro";
 import Button from "../components/Button.astro";
 import KurvItem from "../components/KurvItem.astro";
-import Slider from "../components/Slider.astro";
 
 
 import "../styles/global.css";
@@ -20,7 +19,7 @@ import "../styles/tokens.css";
         <h3>Pris</h3>
     </div>
     <div class="stroke"></div>
-    <KurvItem img="public/single.webp" title="Spillets forbandelse" author="Kristoffer J. Andersen" format="Indbundet" delivery="1-3 hverdage" price="330 kr.">
+    <KurvItem img="imgs/single.webp" title="Spillets forbandelse" author="Kristoffer J. Andersen" format="Indbundet" delivery="1-3 hverdage" price="330 kr.">
         <div class="quantity">
           <button class="minus">-</button>
           <input type="text" class="count" value="1">
@@ -28,7 +27,7 @@ import "../styles/tokens.css";
         </div>
     </KurvItem>
     <div class="stroke"></div>
-    <KurvItem img="public/single.webp" title="Spillets forbandelse" author="Kristoffer J. Andersen" format="Indbundet" delivery="1-3 hverdage" price="330 kr.">
+    <KurvItem img="imgs/single.webp" title="Spillets forbandelse" author="Kristoffer J. Andersen" format="Indbundet" delivery="1-3 hverdage" price="330 kr.">
         <div class="quantity">
         <button class="minus">-</button>
         <input type="text" class="count" value="1">
@@ -58,9 +57,9 @@ import "../styles/tokens.css";
     </section>
       <p class="side">2 - 2 (af 2 produkter)</p>
       <section>
-          <Slider />
       </section>
     </main>
+
 <style>
     main  {
       padding-bottom: 40px;
