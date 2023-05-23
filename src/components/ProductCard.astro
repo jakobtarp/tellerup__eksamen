@@ -1,35 +1,49 @@
 ---
 import "../styles/tokens.css";
 import "../styles/base.css";
-const { titel, imgPath, description, price, discount1, discount2, discount3, shipping, newBadge, link } = Astro.props;
+const { titel, imgPath, imgPath1, imgPath2, imgPath3, imgPath4, imgPath5, imgPath6, imgPath7, imgPath8, forfatter, part, price, anmeldser, newBadge } = Astro.props;
 
 import Button from "./Button.astro";
 ---
 
-<article class="mb-20 mt-20 w-[18.125rem]">
-  {newBadge && <p class="badge mr-auto">NYHED</p>}
-  <img class="imgradius" src={imgPath} alt="" height="320" width="620" />
+<article class="mt-20 w-[312px] h-[500px] shaddowcard mx-auto">
+  <div class="grid imgcard relative">
+    {newBadge && <p class="badge absolute right-0 bottom-0 ">NYHED</p>}
 
-  <h3 class="titel">{titel}</h3>
-  <p class="description">{description}</p>
-  <p class="price">{price}</p>
-  <div class="flex">
-    <p class="discount1">{discount1}</p>
-    <p class="discount2">{discount2}</p>
-    <p class="discount3">{discount3}</p>
-  </div>
-  <div class="flex justify-between">
-    <div class="button1 flex">
-      <img class="h-6 mr-2" src="imgs/shopping-cart.png" alt="" />
-      <a href={link} data-variant={"primary"}>
-        <p>Læg i kurv</p>
-      </a>
+    <img class="imgradius mx-auto my-6" src={imgPath} alt="" height="250" width="170" />
+    <div class="format absolute rounded-r-lg mx-auto bottom-20">
+      <img class="w-9 p-1 mt-1" src={imgPath1} alt="" height="" width="" />
+      <img class="w-9 p-1" src={imgPath2} alt="" height="" width="" />
+      <img class="w-9 p-1 mb-1" src={imgPath3} alt="" height="" width="" />
     </div>
-    <p class="shipping mt-auto">{shipping}</p>
   </div>
+  <article class="px-3 relative">
+    <h3 class="titel">{titel}</h3>
+    <p class="forfatter mb-2">{forfatter}</p>
+    <p class="part">{part}</p>
+    <p class="price my-3">{price}</p>
+    <div class="flex w-4 absolute right-20">
+      <img src={imgPath4} alt="" />
+      <img src={imgPath5} alt="" />
+      <img src={imgPath6} alt="" />
+      <img src={imgPath7} alt="" />
+      <img src={imgPath8} alt="" />
+    </div>
+  </article>
 </article>
 
 <style>
+  .format {
+    background-color: var(--bluegrey);
+  }
+  .shaddowcard {
+    box-shadow: var(--box-shadow);
+  }
+  .imgcard {
+    border-top-left-radius: var(--globalBorderRadiusSm);
+    border-top-right-radius: var(--globalBorderRadiusSm);
+    background-color: var(--cardBg);
+  }
   article {
     border-radius: var(--cardBorderRadius);
     box-shadow: var(--shadowDefault);
@@ -40,46 +54,35 @@ import Button from "./Button.astro";
 
   h3 {
     padding: var(--sm);
-    font-weight: var(--secondaryFontWeight);
+    font-size: var(--font-size-md);
+    font-weight: var(--fontSemibold);
     line-height: var(--primaryLineHeight);
-    margin-bottom: var(--xs);
+    margin-bottom: 10px;
+    margin-top: 20px;
   }
 
-  .description {
+  .forfatter {
+    font-size: var(--font-size-base);
+    font-weight: var(--fontNormal);
     padding-left: var(--sm);
     font-weight: var(--primaryFontWeight);
     line-height: var(--secondaryLineHeight);
-    margin-bottom: var(--xl);
+  }
+
+  .part {
+    padding: 3px;
+    display: inline;
+    background-color: var(--bluegrey);
+    color: var(--white);
+    font-size: var(--font-size-sm);
   }
 
   .price {
-    font-weight: var(--secondaryFontWeight);
-    font-size: var(--xlFontSize);
+    font-size: var(--font-size-md);
+    font-weight: var(--fontSemibold);
     padding-left: var(--sm);
-    color: var(--tertiaryTekstColor);
+    color: var(--ctaColorRed);
     line-height: var(--primaryLineHeight);
-  }
-
-  .discount1 {
-    padding-left: var(--sm);
-    font-weight: var(--primaryFontWeight);
-    line-height: var(--primaryLineHeight);
-    font-size: var(--baseFontSize);
-  }
-  .discount2 {
-    padding-left: var(--sm);
-    font-weight: var(--primaryFontWeight);
-    line-height: var(--primaryLineHeight);
-    font-size: var(--baseFontSize);
-    text-decoration: var(--textLineThrough);
-  }
-  .discount3 {
-    padding-left: var(--sm);
-    font-weight: var(--primaryFontWeight);
-    line-height: var(--primaryLineHeight);
-    font-size: var(--baseFontSize);
-    color: var(--tertiaryTekstColor);
-    margin-bottom: var(--lg);
   }
 
   .shipping {
@@ -101,12 +104,12 @@ import Button from "./Button.astro";
   }
 
   .badge {
-    background-color: var(--ctaSecondaryBgColor);
+    color: var(--white);
+    width: 110px;
+    background-color: var(--bluegrey);
     font-family: var(--fontRoboto);
-    font-weight: var(--secondaryFontWeight);
+    font-weight: var(--fontBold);
     text-align: center;
-    border-top-left-radius: var(--cardBorderRadius);
-    border-top-right-radius: var(--cardBorderRadius);
-    color: var(--ctaPrimaryTekstColor);
+    border-top-left-radius: var(--globalBorderRadiusSm);
   }
 </style>

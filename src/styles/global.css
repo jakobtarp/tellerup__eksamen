@@ -18,7 +18,7 @@ body {
 /* Fluid font size variables, for browsers that support clamp */
 @supports (font-size: clamp(1rem, 1vw, 1rem)) {
   :root {
-    --font-size-sm: clamp(13px, 0vw + 12px, 14px);
+    --font-size-sm: clamp(14px, 0vw + 12px, 15px);
     --font-size-base: clamp(16px, 0vw + 15px, 19px);
     --font-size-md: clamp(20px, 1vw + 18px, 25px);
     --font-size-lg: clamp(25px, 1vw + 21px, 34px);
@@ -28,7 +28,7 @@ body {
   }
 }
 /* Fallback variables for browsers that don't support clamp */
-@supports not (font-size: clamp(1rem, 1vw, 1rem)) {
+/* @supports not (font-size: clamp(1rem, 1vw, 1rem)) {
   :root {
     --font-size-sm: 13px;
     --font-size-base: 16px;
@@ -49,7 +49,7 @@ body {
       --font-size-xxxl: 80px;
     }
   }
-}
+} */
 
 :root {
   /** Border-Radius */
@@ -67,13 +67,13 @@ body {
   --globalPaddingL: 30px;
 
   /** Shadow */
-  box-shadow: 0px 4px 4px 0px #00000040;
+  --box-shadow: 0px 4px 10px 0 rgba(113, 113, 113, 0.5);
 
   /* Font family */
   --globalFont-family: Montserrat;
 
   /** Font-Size */
-  --fontSizeDesktopSm: 12px;
+  /* --fontSizeDesktopSm: 12px; */
   /* --fontSizeDesktopMd: 14px;
   --fontSizeDesktopML: 31px;
   --fontSizeDesktopL: 34px;
@@ -119,6 +119,7 @@ body {
   --darkgrey: #667085;
   --orange: #bd492f;
   --darkOrange: #8f3c26;
+  --cardBg: #e8e8e8;
 
   --headerblue: #a1bfd7;
   --colorPlaceholder: #989898;
