@@ -201,7 +201,7 @@ import Button from "./Button.astro";
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: 3px;
+    gap: 5px;
   }
 
   .tags_button {
@@ -233,62 +233,59 @@ import Button from "./Button.astro";
       grid-template-columns: 1fr 2fr 1fr;
     }
   }
-
   .quantity {
-    display: flex;
-    align-items: center;
-    padding-left: 50px;
-  }
-
-  .quantity .count {
-    margin: 0 10px;
-    font-size: 18px;
-    width: 25px;
-    align-self: center;
-  }
-
-  .minus,
-  .plus {
-    width: 30px;
-    height: 30px;
-    border: none;
-    background-color: #ccc;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-  }
-
-  .minus:hover,
-  .plus:hover {
-    background-color: #999;
-  }
-
-  .minus:active,
-  .plus:active {
-    background-color: #555;
-  }
-
-  @media only screen and (max-width: 600px) {
-    .overskrift {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .overskrift h3 {
-      display: none;
-    }
-    .overskrift :first-child {
       display: flex;
+      align-items: center;
+      padding-left: 50px;
     }
 
-    .quantity {
-      padding-left: 0;
-      justify-content: center;
+    .quantity .count {
+      margin: 0 10px;
+      font-size: 18px;
+      width: 25px;
+      align-self: center;
     }
-  }
 
-  .lager {
-    flex: flex;
-    flex-direction: row;
-    gap: 10px;
-  }
+    .minus,
+    .plus {
+      width: 30px;
+      height: 30px;
+      border: none;
+      background-color: #ccc;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .minus:hover,
+    .plus:hover {
+      background-color: #999;
+    }
+
+    .minus:active,
+    .plus:active {
+      background-color: #555;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .overskrift {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .overskrift h3 {
+        display: none;
+    }
+      .overskrift :first-child {
+        display: flex;
+      }
+
+
+      .quantity {
+        padding-left: 0;
+        justify-content: center;
+      }
+    }
+
+
+  
 </style>
