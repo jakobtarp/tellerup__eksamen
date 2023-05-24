@@ -40,7 +40,7 @@ import "../styles/tokens.css";
             <div>
                 <h2>Levering</h2> 
                 <p>Gratis fragt</p>
-                <p>Forventet levering 15-05-2023</p>
+                <p>Forventet levering 22-06-2023</p>
             </div>
             <div>
                 <h2>Total inkl. moms</h2>
@@ -48,7 +48,7 @@ import "../styles/tokens.css";
             </div>
         </div>
         <div class="cart-row">
-            <Button link="www.google.dk" variant="secondary" size="big" style="red">fortsæt med at handle</Button>
+            <Button link="www.google.dk" variant="secondary" size="big" style="red">Fortsæt med at handle</Button>
             <Button link="index.html" variant="primary" size="big" style="white">Gå til betaling</Button>
         </div>
         <div class="coupon">
@@ -154,13 +154,12 @@ import "../styles/tokens.css";
         min-width:25%;
     }
     .price-row h2 {
-        font-size: 18px;
         line-height: 28px;
         font-weight: 800;
         margin-bottom: 8px;
     }
     .price-row h3 {
-        font-size: 35px;
+        font-size: var(--font-size-lg);
         line-height: 48px;
         font-weight: var(--fontBold);
     }
@@ -186,27 +185,31 @@ import "../styles/tokens.css";
     }
     </style>
 <script>
-  // Hent alle antalknapper på siden
-  var quantityButtons = document.querySelectorAll('.quantity');
+// Hent alle antalknapper på siden
+var quantityButtons = document.querySelectorAll('.quantity');
 
-  // Gå igennem hver antalknap og tilføj klikhændelser til minus- og plusknapperne
-  quantityButtons.forEach(function(button) {
-    var minusButton = button.querySelector('.minus');
-    var plusButton = button.querySelector('.plus');
+// Gå igennem hver antalknap og tilføj klikhændelser til minus- og plusknapperne
+quantityButtons.forEach(function(button) {
+  var minusButton = button.querySelector('.minus');
+  var plusButton = button.querySelector('.plus');
+  var countInput = button.querySelector('.count');
+
+  // Klikhændelse for minusknappen
+  minusButton.addEventListener('click', function() {
     var countInput = button.querySelector('.count');
+    var currentValue = parseInt(countInput.value);
+    if (currentValue > 1) {
+      countInput.value = (currentValue - 1).toString();
+    }
+  });
 
-    // Klikhændelse for minusknappen
-    minusButton.addEventListener('click', function() {
-      var countInput = button.querySelector('.count') as HTMLInputElement;
-      var countInput = button.querySelector('.count') as HTMLInputElement;
-
-    });
-
-    // Klikhændelse for plusknappen
-    plusButton.addEventListener('click', function() {
-      var currentValue = parseInt((countInput as HTMLInputElement).value);
-      countInput.value = (currentValue + 1).toString();
+  // Klikhændelse for plusknappen
+  plusButton.addEventListener('click', function() {
+    var countInput = button.querySelector('.count');
+    var currentValue = parseInt(countInput.value);
+    countInput.value = (currentValue + 1).toString();
+  });
 });
 
-  });
+
 </script>

@@ -7,14 +7,3 @@ html,
 body {
   height: 100% !important;
 }
-
-
-[data-icon] {
-  width: 2.5rem;
-  height: 2.5rem;
-  margin-top: -3.25rem;
-  padding: 0.5rem;
-  border-radius: 1e5px;
-  background: var(--cta-bg);
-  color: #fff;
-}

@@ -5,6 +5,7 @@ import Genre from "../components/Genre.astro";
 import Button from "../components/Button.astro";
 import Footer from "../components/Footer.astro";
 import Label from "../components/Label.astro";
+import Slider from "../components/Slider.astro";
 
 
 import "../styles/global.css";
@@ -28,7 +29,7 @@ import "../styles/tokens.css";
 <section class="fragtContainer">
 	<div class="fragt">
 	<Fragt icon="imgs/book.webp" title="Stort udvalg af bøger" text="Vælg blandt vores mange spændene genrer"></Fragt>
-	<Fragt icon="imgs/delivery-truck.webp" title="Hurtig fragt" text="1-3 dages levering"></Fragt>
+	<Fragt icon="imgs/delivery-truck.webp" title="Hurtig fragt" text="1-3 dages levering" class="h-10"></Fragt>
 	<Fragt icon="imgs/fast-delivery.webp" title="Fri fragt" text="Ved køb over 300 DKK leverer vi gratis til din hoveddør"></Fragt>
 	<Fragt icon="imgs/book.webp" title="Retur nemt" text="Forkert valg? Returner nemt og gratis"></Fragt>
 	</div>
@@ -43,7 +44,7 @@ import "../styles/tokens.css";
 		<article>
 		<div class="singleTextContainer">
 			<h1>Forudbestil “Større end os” af Christina Bonde</h1>
-			<h2>“Større end os” udkommer den 1. Juli 2023. Bogen kan forudbestilles hos Tellerup.</h2>
+			<h2>Udkommer den 1. Juli 2023. <br> Bogen kan forudbestilles hos Tellerup.</h2>
 			<h3>Resumé</h3>
 			<p>
 			Chaol og Nesryn er rejst til det sydlige kontinent med to mål for øje: At helbrede Chaolog bringe en styrke med tilbage. Det skal dog vise sig at blive sværere end forventet, for khaganen, det sydlige kontinents mægtige leder, er i sorg og ønsker ikke at træffe en beslutning her og nu. Da en healer bliver myrdet under mystiske omstændigheder, frygter Chaol og Nesrynat Valkerne er fulgt efter dem til syden.
@@ -61,7 +62,7 @@ import "../styles/tokens.css";
 	</div>
 	</section>
 <!-- dubleview -->
-<section class="dubleviewContainer">
+	<section class="dubleviewContainer">
 	<div class="box">
 		<div class="boxImage">
 		<img src="imgs/landing_tilbud.webp" alt="tilbud">
@@ -81,11 +82,15 @@ import "../styles/tokens.css";
 		</div>
 	</div>
 	</section>
+<!-- carussel -->
+	<section class="carusselSection">
+			<Slider />
+	</section>
 <!-- genre -->
-<section class="genreSection">
-	<Genre></Genre>
-</section>
-<Footer />
+	<section class="genreSection">
+		<Genre></Genre>
+	</section>
+	<Footer />
 <style>
 .hero {
 	display: flex;
@@ -113,7 +118,6 @@ import "../styles/tokens.css";
 	margin-bottom: 30px;
 	padding: 5px;
 	color: var(--white);
-	font-weight: var(--fontBold);
 }
 
 .hero .heroArticle2 {
@@ -193,7 +197,6 @@ padding-bottom: 30px;
 
 .singleSection .single article .singleTextContainer h2 {
   font-weight: var(--fontSemibold);
-  font-size: 16px;
 }
 
 .singleSection .single article .singleTextContainer h3 {
@@ -263,7 +266,7 @@ padding-bottom: 30px;
   }
 
   .singleSection .single article .singleTextContainer h1 {
-    font-size: clamp(32px, 1rem + 2vw, 32px);
+    font-size: var(--font-size-lg);
     line-height: 1.1;
     margin-bottom: 16px;
   }
@@ -324,6 +327,16 @@ padding-bottom: 30px;
 		min-height: 350px;
 	}
 }
+/*********************** Section 6 ******************/
+.carusselSection {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	margin: 90px 3% 90px 3%;
+}
+
+
+
 /* Genresection */
 .genreSection {
 	margin: 90px 3% 90px 3%;
