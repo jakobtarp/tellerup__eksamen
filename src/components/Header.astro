@@ -7,10 +7,10 @@ import Button from "../components/Button.astro";
     <div class="levering">
       <svg class="closeBanner"
       xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="white" stroke-linecap="round" stroke-width="1.5"><path stroke-linejoin="round" stroke-miterlimit="1.5" d="M8 19a2 2 0 1 0 0-4a2 2 0 0 0 0 4Zm10 0a2 2 0 1 0 0-4a2 2 0 0 0 0 4Z"/><path d="M10.05 17H15V6.6a.6.6 0 0 0-.6-.6H1m4.65 11H3.6a.6.6 0 0 1-.6-.6v-4.9"/><path stroke-linejoin="round" d="M2 9h4"/><path d="M15 9h5.61a.6.6 0 0 1 .548.356l1.79 4.028a.6.6 0 0 1 .052.243V16.4a.6.6 0 0 1-.6.6h-1.9M15 17h1"/></g></svg>
-      <h3 class="closeBanner">Levering: 1-3 hverdage</h3>
+      <h4 class="closeBanner">Levering: 1-3 hverdage</h4>
     </div>
     <div class="trustpilot">
-      <h3>Trustpilot</h3>
+      <h4>Trustpilot</h4>
       <div class="rating">
         <span class="full" aria-label="Fuld stjerne"></span>
         <span class="full" aria-label="Fuld stjerne"></span>
@@ -19,12 +19,12 @@ import Button from "../components/Button.astro";
         <span class="unset" aria-label="Tom stjerne"></span>
       </div>
     </div>
-    <h3 class="closeBanner">Gratis levering ved køb over 300 DKK</h3>
+    <h4 class="closeBanner">Gratis levering ved køb over 300 DKK</h4>
   </div>
   <div class="mainheader">
     <!-- Logo -->
     <a href="index.html">
-      <img src="public/tellerup_logo3_primaer.webp" alt="logobillede" class="logo"/>
+      <img src="imgs/tellerup_logo3_primaer.webp" alt="logobillede" class="logo"/>
     </a>
     <div class="search-container">
       <input type="text" class="search-input" id="searchInput" placeholder="Søg...">
@@ -56,7 +56,7 @@ import Button from "../components/Button.astro";
           <nav id="sidebar-menu">
               <div class="headerOpenBurger">
                   <a href="index.html">
-                      <img src="public/tellerup_logo3_primaer.webp" alt="logobillede" class="logoBurger"/>
+                      <img src="public/imgs/tellerup_logo3_primaer.webp" alt="logobillede" class="logoBurger"/>
                   </a>
                   <span class="iconX"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" color="#080707"><path d="M39 10.44 37.56 9 24 22.56 10.44 9 9 10.44 22.56 24 9 37.56 10.44 39 24 25.44 37.56 39 39 37.56 25.44 24 39 10.44z"></path></svg></span>
               </div>
@@ -266,7 +266,7 @@ header {
   width: 100%;
   z-index: 20;
 }
-h2, h3, p {
+h2, h3, h4, p {
     color: var(--white);
     text-decoration: none;
 }
@@ -364,7 +364,7 @@ h2, h3, p {
   .mainheader .search-container {
     display: flex;
     align-items: center;
-    position: relative;
+    /* position: relative; */
   }
 
   .mainheader input[type="text"] {
@@ -507,6 +507,7 @@ h2, h3, p {
     border: none;
     padding: 0px;
     margin: 0px;
+    z-index: 20;
 }
 
 #hamburger-menu #sidebar-menu {
@@ -630,13 +631,23 @@ color: black;
     flex-direction: row;
     align-items: center;
     justify-content: center; 
-}
+  }
+  .navLeft svg {
+    border: none;
+
+  }
+  svg {
+    border: none;
+
+  }
 /* search */
 .navHeader .search-container {
     display: flex;
     align-items: center;
     padding: 5px;
     position: relative;
+ 
+    
     /* ændre ************************************************* */
 }
 .navHeader input[type="text"] {
@@ -819,8 +830,8 @@ button :hover {
 
 <script>
   // burgermenu 
-    // Hent reference til krydsikonet
-    const closeIcon = document.querySelector('.iconX');
+    // const closeIcon = document.querySelector('.iconX');    // Hent reference til krydsikonet
+
 
 // Hent reference til den sektion, der skal lukkes
 const sectionToClose = document.querySelector('#sidebar-menu');
