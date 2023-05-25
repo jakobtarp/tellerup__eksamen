@@ -69,7 +69,8 @@ body {
   --globalPaddingL: 30px;
 
   /** Shadow */
-  /* --box-shadow: 0px 4px 10px 0 rgba(113, 113, 113, 0.5); */
+  --box-shadow: 0px 4px 10px 0 rgba(113, 113, 113, 0.5);
+  --button-shadow: 0px 4px 4px 0 rgba(14, 13, 13, 0.5);
 
   /* Font family */
   --globalFont-family: Montserrat;
