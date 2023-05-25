@@ -56,7 +56,7 @@ import Button from "../components/Button.astro";
           <nav id="sidebar-menu">
               <div class="headerOpenBurger">
                   <a href="index.html">
-                      <img src="public/tellerup_logo3_primaer.webp" alt="logobillede" class="logoBurger"/>
+                      <img src="public/imgs/tellerup_logo3_primaer.webp" alt="logobillede" class="logoBurger"/>
                   </a>
                   <span class="iconX"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" color="#080707"><path d="M39 10.44 37.56 9 24 22.56 10.44 9 9 10.44 22.56 24 9 37.56 10.44 39 24 25.44 37.56 39 39 37.56 25.44 24 39 10.44z"></path></svg></span>
               </div>
@@ -122,6 +122,9 @@ import Button from "../components/Button.astro";
       </label>
   <div class="overlay"></div>
     
+      
+
+
     </div>
   </div>
   <div class="navHeader">
@@ -361,7 +364,7 @@ h2, h3, h4, p {
   .mainheader .search-container {
     display: flex;
     align-items: center;
-    position: relative;
+    /* position: relative; */
   }
 
   .mainheader input[type="text"] {
@@ -504,6 +507,7 @@ h2, h3, h4, p {
     border: none;
     padding: 0px;
     margin: 0px;
+    z-index: 20;
 }
 
 #hamburger-menu #sidebar-menu {
@@ -627,13 +631,23 @@ color: black;
     flex-direction: row;
     align-items: center;
     justify-content: center; 
-}
+  }
+  .navLeft svg {
+    border: none;
+
+  }
+  svg {
+    border: none;
+
+  }
 /* search */
 .navHeader .search-container {
     display: flex;
     align-items: center;
     padding: 5px;
     position: relative;
+ 
+    
     /* ændre ************************************************* */
 }
 .navHeader input[type="text"] {
@@ -685,9 +699,6 @@ color: black;
     color: var(--black);
     text-decoration: none;
     font-size: clamp(10px, 1.2vw, 16px);
-}
-.navHeader button svg {
-  border: solid 0px;
 }
   .navHeader .navLeft {
     display: flex;
@@ -819,8 +830,8 @@ button :hover {
 
 <script>
   // burgermenu 
-    // Hent reference til krydsikonet
-    const closeIcon = document.querySelector('.iconX');
+    // const closeIcon = document.querySelector('.iconX');    // Hent reference til krydsikonet
+
 
 // Hent reference til den sektion, der skal lukkes
 const sectionToClose = document.querySelector('#sidebar-menu');
