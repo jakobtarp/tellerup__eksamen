@@ -4,7 +4,7 @@ import Button from "./Button.astro";
  <!-- Cookies -->
  <div class="relative cookie-box" x-data="{cookies: true}"  @keydown.window.escape="cookies = false"> 
   <!-- Indhold til cookies -->
-  <div x-show="cookies" class="z-50 cookie-box-container  bg-white" style="display: none" x-transition:enter="transition ease-in duration-200" x-transition:enter-start="opacity-0 transform -translate-x-40" x-transition:enter-end="opacity-100 transform translate-x-0" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 transform translate-x-0" x-transition:leave-end="opacity-0 transform -translate-x-40">
+  <div x-show="cookies" class="z-50 cookie-box-container absolute bg-white" style="display: none" x-transition:enter="transition ease-in duration-200" x-transition:enter-start="opacity-0 transform -translate-x-40" x-transition:enter-end="opacity-100 transform translate-x-0" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 transform translate-x-0" x-transition:leave-end="opacity-0 transform -translate-x-40">
     <!-- Text -->
     <div class="overflow-hidden">
       <div class="relative overflow-hidden px-8 pt-8">
@@ -45,7 +45,7 @@ import Button from "./Button.astro";
 }
 .cookie-box .cookie-box-container {
   position: absolute;
-  top: 30%;
+  top: 50%;
   left: 20px;
   right: 20px;
   margin: -100px auto 0;
