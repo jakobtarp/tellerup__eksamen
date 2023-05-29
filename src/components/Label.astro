@@ -1,48 +1,38 @@
 ---
-const {variant = "false"} = Astro.props;
+const { variant } = Astro.props;
 ---
-<span data-variant={variant}>
-    <img src="public/big_badge.webp" alt="label">
-</span>
 
-
-
-
-
-
-
-<!-- <Label variant="true"></Label> -->
+<div data-variant={variant} class="label">
+  <h6><slot /></h6>
+</div>
 
 <style>
-label {
-    width: 50%;
-    position: relative;
-}
+  .label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+    text-transform: uppercase;
+    text-align: center;
+    align-self: end;
+  }
 
-span {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 60px;
-  height: 60px;
-  border-width: 30px;
-  border-color: transparent rgba(0,0,0,.7) rgba(0,0,0,.7) transparent;
-  border-style: solid;
-  color: #fff;
-  font-size: 20px;
-}
+  [data-variant="nyhed"] {
+    /* background: var(--green-tilbud); */
+    width: 75px;
+    height: 20px;
+  }
 
-[data-variant="true"] {
-    display: block;
-    position: absolute;
-}
-[data-variant="false"] {
-    display: none;
-}
-@media (min-width: 500px) {
-    label {
-    width: 20%;
-    position: relative;
-}
-}
+  [data-variant="tilbud"] {
+    /* background: var(--red-tilbud); */
+    width: 36px;
+    height: 18px;
+  }
+
+  [data-variant="tilbage"] {
+    /* background: var(--få-tilbage-yellow);
+    color: var(--sort) */
+    width: 75px;
+    height: 20px;
+  }
 </style>

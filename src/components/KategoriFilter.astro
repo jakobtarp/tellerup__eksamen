@@ -1,0 +1,167 @@
+---
+import "../styles/tokens.css";
+import "../styles/base.css";
+import "../styles/global.css";
+import MainHeader from "../components/MainHeader.astro";
+---
+
+<MainHeader title="Kategorier" beskrivelse="Se vores store udvalg" />
+
+<div class="dropdown-container">
+  <div>
+    <button class="dropdown-button">Kategorier</button>
+    <div class="dropdown">
+      <input class="mb-3" type="text" class="dropdown-search" placeholder="Søg..." />
+      <div class="dropdown-content">
+        <label><input type="checkbox" name="option1" />Alle bøger</label><br />
+        <label><input type="checkbox" name="option2" />Bestsellers</label><br />
+        <label><input type="checkbox" name="option2" />Nyheder</label><br />
+        <label><input type="checkbox" name="option2" />Notesbøger</label><br />
+        <label><input type="checkbox" name="option3" />Bogserier</label>
+      </div>
+    </div>
+  </div>
+  <div>
+    <button class="dropdown-button">Forfattere</button>
+    <div class="dropdown">
+      <input class="mb-3" type="text" class="dropdown-search" placeholder="Søg..." />
+      <div class="dropdown-content cursor-pointer">
+        <label><input class="mt-4" type="checkbox" name="option4" />Christina Bonde</label><br />
+        <label><input class="mt-4" type="checkbox" name="option5" />Bettina Stuhr Lindskow</label><br />
+        <label><input class="mt-4" type="checkbox" name="option4" />Line Wenzel</label><br />
+        <label><input class="mt-4" type="checkbox" name="option5" />Kristoffer J. Andersen</label><br />
+        <label><input class="mt-4" type="checkbox" name="option4" />Louise Hailberg</label><br />
+        <label><input class="mt-4" type="checkbox" name="option5" />Kristoffer J. Andersen</label><br />
+        <br />
+        <button class="underline">Se alle..</button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <button class="dropdown-button">Tags</button>
+    <div class="dropdown">
+      <input class="mb-3" type="text" class="dropdown-search" placeholder="Søg..." />
+      <div class="dropdown-content cursor-pointer">
+        <label><input class="mt-4" type="checkbox" name="option7" />Fantasy</label><br />
+        <label><input class="mt-4" type="checkbox" name="option8" />Krimi</label><br />
+        <label><input class="mt-4" type="checkbox" name="option7" />Venskab</label><br />
+        <label><input class="mt-4" type="checkbox" name="option8" />Realisme</label><br />
+        <label><input class="mt-4" type="checkbox" name="option8" />Ungdom</label><br />
+        <label><input class="mt-4" type="checkbox" name="option9" />Tilbud</label>
+      </div>
+    </div>
+  </div>
+  <div>
+    <button class="dropdown-button">Aldersgruppe</button>
+    <div class="dropdown">
+      <input class="mb-3" type="text" class="dropdown-search" placeholder="Søg..." />
+      <div class="dropdown-content cursor-pointer">
+        <label><input class="mt-4" type="checkbox" name="option7" />0-2 år</label><br />
+        <label><input class="mt-4" type="checkbox" name="option8" />3-5 år</label><br />
+        <label><input class="mt-4" type="checkbox" name="option7" />6-10 år</label><br />
+        <label><input class="mt-4" type="checkbox" name="option8" />10-15 år</label><br />
+        <label><input class="mt-4" type="checkbox" name="option8" />Over 15 år</label>
+      </div>
+    </div>
+  </div>
+  <div>
+    <button class="dropdown-button">Format</button>
+    <div class="dropdown">
+      <input class="mb-3" type="text" class="dropdown-search" placeholder="Søg..." />
+      <div class="dropdown-content cursor-pointer">
+        <label><input class="mt-4" type="checkbox" name="option7" />Indbundet</label><br />
+        <label><input class="mt-4" type="checkbox" name="option8" />E-bog</label><br />
+        <label><input class="mt-4" type="checkbox" name="option9" />Lydbog</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .dropdown-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  .dropdown {
+    display: none;
+    min-width: 160px;
+    padding: 12px 16px;
+  }
+
+  .dropdown-button {
+    position: relative;
+    padding-right: 25px;
+    border-bottom: 1.3px solid;
+    font-size: var(--font-size-base);
+    font-weight: var(--fontBold);
+  }
+  .dropdown-content {
+    gap: 10px;
+  }
+
+  .dropdown-content input[type="checkbox"] {
+    transform: scale(1.5);
+    margin-right: 8px;
+  }
+
+  .dropdown-button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    width: 20px; /* Juster bredden efter dit billede */
+    height: 20px; /* Juster højden efter dit billede */
+    background-image: url("imgs/downarrow.png");
+    background-size: cover; /* Juster størrelsen efter dit billede */
+    background-position: right center; /* Tilpas baggrundens position */
+  }
+
+  .dropdown-button.open::after {
+    content: "";
+    position: absolute;
+    top: 5%;
+    right: 5px;
+    transform: translateY(-50%);
+    width: 20px; /* Juster bredden efter dit billede */
+    height: 20px; /* Juster højden efter dit billede */
+    background-image: url("imgs/downarrow.png");
+    background-size: cover; /* Juster størrelsen efter dit billede */
+    background-position: right center; /* Tilpas baggrundens position */
+    transform: translateY(1px) rotate(-180deg);
+  }
+</style>
+
+<script>
+  var dropdownButtons = document.querySelectorAll(".dropdown-button");
+
+  for (var i = 0; i < dropdownButtons.length; i++) {
+    dropdownButtons[i].addEventListener("click", function () {
+      var dropdown = this.nextElementSibling;
+      var isOpen = this.classList.toggle("open");
+      dropdown.style.display = isOpen ? "block" : "none";
+    });
+  }
+  var dropdownSearches = document.querySelectorAll(".dropdown-search");
+
+  for (var i = 0; i < dropdownSearches.length; i++) {
+    dropdownSearches[i].addEventListener("input", function () {
+      var dropdown = this.parentNode.nextElementSibling;
+      var checkboxes = dropdown.querySelectorAll('.dropdown-content input[type="checkbox"]');
+      var searchTerm = this.value.toLowerCase();
+
+      for (var j = 0; j < checkboxes.length; j++) {
+        var label = checkboxes[j].parentNode;
+        var optionText = label.textContent.toLowerCase();
+
+        if (optionText.indexOf(searchTerm) > -1) {
+          label.style.display = "block";
+        } else {
+          label.style.display = "none";
+        }
+      }
+    });
+  }
+</script>
