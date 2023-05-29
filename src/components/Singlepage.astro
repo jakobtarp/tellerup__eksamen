@@ -1,5 +1,5 @@
 ---
-const { img, title, type, resume, resume_lang, pris, format, forlag, udgave, EAN, levering, tidligere_pris } = Astro.props;
+const { img, title, type, resume, resume_lang, pris_indbunden, format, forlag, udgave, EAN, levering, tidligere_pris_indbunden, tidligere_pris_ebog, pris_ebog, tidligere_pris_lydbog, pris_lydbog } = Astro.props;
 import "../styles/tokens.css";
 import "../styles/global.css";
 import Button from "./Button.astro";
@@ -39,54 +39,50 @@ import Button from "./Button.astro";
     <div>
       <h2>Vælg format:</h2>
       <div class="formater">
-      <div class="box">
-        <div></div>
-        <div class="info_format">
-          
-            <img src="imgs/book.webp" alt="book" width="35px" />
-          <div class="title_format">
-          <p>{format}</p>
-          <p><strong>{pris} DKK</strong></p></div>
-          <p><s>{tidligere_pris} DKK</s></p>
+        <div class="box border_active">
+          <div></div>
+          <div class="info_format">
+            <img src="imgs/indbunden.webp" alt="book" width="35px" />
+            <div class="title_format">
+              <p>Indbunden</p>
+              <p><strong>{pris_indbunden} DKK</strong></p>
+            </div>
+            <p><s>{tidligere_pris_indbunden}</s></p>
+          </div>
+          <div class="check_active">
+            <img class="red_check" src="imgs/check.webp" alt="check" />
+          </div>
         </div>
-
-        <div class="check">
-          <img src="imgs/check.webp" alt="check" />
+      
+        <div class="box">
+          <div></div>
+          <div class="info_format">
+            <img src="imgs/ebog.webp" alt="book" width="25px" />
+            <div class="title_format">
+              <p>E-bog</p>
+              <p><strong>{pris_ebog} DKK</strong></p>
+            </div>
+            <p><s>{tidligere_pris_ebog}</s></p>
+          </div>
+          <div class="check">
+            <!-- <img class="red_check" src="imgs/check.webp" alt="check" /> -->
+          </div>
         </div>
-      </div>
-
-      <div class="box">
-        <div></div>
-        <div class="info_format">
-          
-            <img src="imgs/book.webp" alt="book" width="35px" /> 
-          <div class="title_format">
-          <p>{format}</p>
-          <p><strong>{pris} DKK</strong></p></div>
-          <p><s>{tidligere_pris} DKK</s></p>
+      
+        <div class="box">
+          <div></div>
+          <div class="info_format">
+            <img src="imgs/lydbog.webp" alt="book" width="35px" />
+            <div class="title_format">
+              <p>Lydbog</p>
+              <p><strong>{pris_lydbog} DKK</strong></p>
+            </div>
+            <p><s>{tidligere_pris_lydbog} </s></p>
+          </div>
+          <div class="check">
+            <!-- <img class="red_check" src="imgs/check.webp" alt="check" /> -->
+          </div>
         </div>
-        <div class="check_inactive"></div>
-       <!--  <div class="check">
-          
-          <img src="imgs/check.webp" alt="check" /> </div>-->
-        
-      </div>
-
-      <div class="box">
-        <div></div>
-        <div class="info_format">
-          
-            <img src="imgs/book.webp" alt="book" width="35px" /> 
-          <div class="title_format">
-          <p>{format}</p>
-          <p><strong>{pris} DKK</strong></p></div>
-          <p><s>{tidligere_pris} DKK</s></p>
-        </div>
-        <div class="check_inactive"></div>
-       <!--  <div class="check">
-          
-          <img src="imgs/check.webp" alt="check" /> </div>-->
-        
       </div>
       
     </div>
@@ -100,7 +96,8 @@ import Button from "./Button.astro";
       </div>
       
 
-      <Button link="www.google.dk" variant="primary" size="big" style="white"> <img  src="imgs/shopping-cart.webp" width="20px">Læg i kurv</Button>
+      <!-- <img  src="imgs/shopping-cart.webp" width="20px"> -->
+      <Button class="flex" link="www.google.dk" variant="primary" size="big" style="white"> Læg i kurv</Button>
       <div class="tilbage">
         <div class="lager">
           <div class="lager_box">
@@ -112,7 +109,6 @@ import Button from "./Button.astro";
       </div>
     </div>
   </article>
-
 
   <article>
     <div id="resume">
@@ -240,8 +236,10 @@ flex-direction: column;
 justify-content: center;
 text-align: center;
   }
-
-  .check {
+.border_active {
+  border-color: var(--ctaColorRed);
+}
+  .check_active {
     background-color: var(--ctaColorRed);
     width: 20px;
     height: 20px;
@@ -249,12 +247,20 @@ text-align: center;
     padding: 2px;
   }
 
-  .check_inactive {
+  .check {
    background-color:  var(--lightgrey);
     width: 20px;
     height: 20px;
     border-radius: 9999px;
     padding: 2px;
+  }
+
+  .lager_box {
+    background-color: var(--darkgreen);
+    width: 20px;
+    height: 20px;
+    border-radius: 9999px;
+    padding: 3px;
   }
 
   .lager_box {
