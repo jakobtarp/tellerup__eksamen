@@ -4,14 +4,12 @@ import "../styles/global.css";
 import "../styles/tokens.css";
 ---
 
-<a href={link} data-variant={variant} data-size={size} data-style={style}>
+<a class="my-auto" href={link} data-variant={variant} data-size={size} data-style={style}>
   <slot />
 </a>
 
 <style>
   a {
-    box-shadow: var(--button-shadow);
-    text-align: center;
   }
   [data-variant="tags"] {
     background-color: var(--ctaColorRed);
@@ -21,16 +19,21 @@ import "../styles/tokens.css";
     width: 100px;
     height: 25px;
     display: block;
+    box-shadow: var(--button-shadow);
+    text-align: center;
   }
 
   [data-variant="primary"] {
     background-color: var(--ctaColorRed);
     text-decoration: none;
     border-radius: var(--ctaBorderRadius);
-    
+    box-shadow: var(--button-shadow);
+    text-align: center;
   }
   [data-variant="primary"]:hover {
     scale: var(--ctaHover);
+    box-shadow: var(--button-shadow);
+    text-align: center;
   }
 
   [data-variant="secondary"] {
@@ -40,9 +43,13 @@ import "../styles/tokens.css";
     border-color: var(--ctaColorRed);
     text-decoration: none;
     border-width: 2px;
+    box-shadow: var(--button-shadow);
+    text-align: center;
   }
   [data-variant="secondary"]:hover {
     scale: var(--ctaHover);
+    box-shadow: var(--button-shadow);
+    text-align: center;
   }
 
   [data-variant="tertiary"] {
