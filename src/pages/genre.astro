@@ -5,7 +5,6 @@ import MainHeader from "../components/MainHeader.astro";
 import "../styles/global.css";
 import "../styles/tokens.css";
 ---
-
 <MainLayout title="Genrer" />
 <MainHeader title="Genrer" />
 <section class="genre-section">
@@ -26,9 +25,6 @@ import "../styles/tokens.css";
 </section>
 
 <style>
-  * {
-    box-sizing: border-box;
-  }
   .genre-section {
     text-align: center;
   }
@@ -39,7 +35,7 @@ import "../styles/tokens.css";
   }
   @media (min-width: 400px) {
     .genre-section {
-      padding: 70px;
+      padding-block: 70px;
     }
   }
   .genre-section h2 {

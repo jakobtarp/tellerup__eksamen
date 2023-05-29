@@ -16,7 +16,7 @@ import MainHeader from "../components/MainHeader.astro";
   <body>
     <MainLayout title="Cart" />
   
-    <main class="px-5">
+    <main class="box">
       <Singlepage
         type="Roman"
         title="Større end os"
@@ -39,3 +39,11 @@ import MainHeader from "../components/MainHeader.astro";
   </body>
 </html>
 
+<style>
+
+@media (min-width: 300px) {
+    .box {
+      padding-inline: 30px;
+    }
+  }
+</style>

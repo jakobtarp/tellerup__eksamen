@@ -1,0 +1,109 @@
+---
+const { link, style = "sort", variant = "primary", size = "medium" } = Astro.props;
+import "../styles/tokens.css";
+import "../styles/global.css";
+---
+
+<a href={link} data-variant={variant} data-size={size} data-style={style}>
+  <slot />
+</a>
+
+<style>
+  a {
+    text-align: center;
+  }
+  [data-variant="tags"] {
+    background-color: var(--ctaColorRed);
+    color: var(--ctaColorWhite);
+    border-radius: var(--ctaBorderRadius);
+    font-size: 16px;
+    width: 100px;
+    height: 25px;
+    display: block;
+  }
+
+  [data-variant="primary"] {
+    background-color: var(--ctaColorRed);
+
+    border-radius: var(--ctaBorderRadius);
+  }
+  [data-variant="primary"]:hover {
+    scale: var(--ctaHover);
+  }
+
+  [data-variant="secondary"] {
+    background-color: var(--ctaColorWhite);
+    color: var(--ctaColorRed);
+    border-radius: var(--ctaBorderRadius);
+    border-color: var(--ctaColorRed);
+    border-width: 2px;
+  }
+  [data-variant="secondary"]:hover {
+    scale: var(--ctaHover);
+  }
+
+  [data-variant="tertiary"] {
+    text-decoration: var(--ctaTextDecoration);
+    font-size: 16px;
+  }
+
+  [data-variant="tertiary"]:hover {
+    scale: var(--ctaHover);
+  }
+
+  [data-variant="ghost"] {
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  [data-size="base"] {
+    padding-inline: 25px;
+    padding-block: 8px;
+    font-size: 18px;
+    padding-inline: 25px;
+
+    display: inline-block;
+
+    @media (max-width: 600px) {
+      font-size: 16px;
+      padding-block: 6px;
+      padding-inline: 0;
+      width: 100%;
+    }
+  }
+
+  [data-size="big"] {
+    font-size: 18px;
+    padding-block: 8px;
+    padding-inline: 40px;
+    display: inline-block;
+    /* display: flex;
+    justify-content: center; */
+
+    @media (max-width: 600px) {
+      padding-block: 6px;
+      width: 100%;
+      font-size: 15px;
+      padding-inline: 0;
+    }
+  }
+
+  [data-size="tags"] {
+  }
+
+  [data-style="red"] {
+    color: var(--ctaColorRed);
+  }
+
+  [data-style="sort"] {
+    color: var(--ctaColorBlack);
+  }
+
+  [data-style="green"] {
+    color: var(--ctaColorGreen);
+  }
+
+  [data-style="white"] {
+    color: var(--ctaColorWhite);
+  }
+</style>

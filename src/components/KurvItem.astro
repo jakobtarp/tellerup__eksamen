@@ -19,7 +19,6 @@ const {img, title, author, format, delivery, price} = Astro.props;
     <slot />
     <div class="right">
         <h2 class="h2">{price}</h2>
-        <Button link="index.html" variant="primary" size="small/base" style="white">Læg i kurv</Button>
         <Button link="index.html" variant="ghost" style="red">Slet</Button>
 
     </div>
@@ -63,6 +62,7 @@ const {img, title, author, format, delivery, price} = Astro.props;
         flex-direction: column;
         gap: 20px;
         align-items: center;
+        padding-top: 43px;
     }
     /* .right :last-child {
         flex: end;

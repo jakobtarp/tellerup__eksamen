@@ -8,7 +8,6 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-
 import Genre from "../components/Genre.astro";
 ---
 
@@ -16,7 +15,7 @@ import Genre from "../components/Genre.astro";
 <MainHeader title="Kategorier" beskrivelse="Se vores store udvalg" />
 <!-- <button class="">Filtrer</button> -->
 <main>
-  <div class="px-2 lg:px-8">
+  <div class="box-section">
     <div class="grid grid-cols-2 lg:block">
       <div id="mobiledown" class="mobile-down lg:hidden my-auto px-2">
         <Button variant="primary" size="base" style="white">Filtrer</Button>
@@ -127,6 +126,12 @@ import Genre from "../components/Genre.astro";
 <Genre />
 <Footer />
 <style>
+    @media (min-width: 300px) {
+    .box-section {
+      padding-inline: 30px;
+    }
+  }
+
   .nextbefore {
     /* font-size: var(--font-size-base); */
     color: var(--orange);

@@ -34,7 +34,7 @@ import "../styles/tokens.css";
     </div>
   </KurvItem>
   <div class="stroke"></div>
-  <section>
+  <section class="section-price-row">
     <div class="price-row">
       <div>
         <h2>Levering</h2>
@@ -55,18 +55,10 @@ import "../styles/tokens.css";
     </div>
   </section>
   <p class="side">2 - 2 (af 2 produkter)</p>
-  <section></section>
 </main>
 
 <style>
-  main {
-    padding-bottom: 40px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1280px;
-  }
+
 
   .overskrift {
     display: flex;
@@ -116,6 +108,7 @@ import "../styles/tokens.css";
   }
   .quantity input {
     border: 0.5px solid #ccc;
+    
   }
   .minus:active,
   .plus:active {
@@ -138,14 +131,15 @@ import "../styles/tokens.css";
       justify-content: center;
     }
   }
-
+.section-price-row {
+    padding-inline: 50px;
+    padding-top: 30px;
+}
   .price-row {
     display: flex;
     flex-wrap: wrap;
     text-align: right;
     justify-content: flex-end;
-    margin-top: 32px;
-    margin-bottom: 32px;
     gap: 20px;
   }
   .price-row div {

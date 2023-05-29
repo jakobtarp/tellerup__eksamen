@@ -1,0 +1,65 @@
+---
+import Card from "./Card.astro";
+const { newBadge } = Astro.props;
+---
+
+<section class="cards bg-gray-900">
+  <ul>
+    <header>
+      <h2 class="text-white p-4 text-2xl font-bold">Focus</h2>
+    </header>
+    <div class="grid grid-cols-5 gap-3 mr-3 ml-3">
+      <Card header="Pæceful Piano" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        <img src="imgs/peaceful_piano.jpeg" alt="" />
+      </Card>
+      <Card header="Deep focus" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        <img src="imgs/deep_focus.jpeg" alt="" />
+      </Card>
+      <Card header="Instrumental study" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        <img src="imgs/instrumental_study.jpeg" alt="" />
+      </Card>
+      <Card header="Day dreamer" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        <img src="imgs/day_dreamer.jpeg" alt="" />
+      </Card>
+      <Card header="Focus flow" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        <img src="imgs/focus_flow.jpeg" alt="" />
+      </Card>
+    </div>
+  </ul>
+  <ul>
+    <header>
+      <h2 class="text-white p-4 text-2xl font-bold bg-gray-900">Spotify Playlists</h2>
+    </header>
+    <div class="grid grid-cols-5 gap-3 mr-3 ml-3">
+      <Card header="Chill hits" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        <img src="imgs/chill_hits.jpeg" alt="" />
+      </Card>
+      <Card header="Jazz vibes" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        <img src="imgs/jazz_vibes.jpeg" alt="" />
+      </Card>
+      <Card header="Rap caviar" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        <img src="imgs/rap_caviar.jpeg" alt="" />
+      </Card>
+      <Card header="Reading adventure" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        <img src="imgs/reading_adventure.jpeg" alt="" />
+      </Card>
+      <Card header="All out 2010's" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+        <img src="imgs/all_out_2010s.jpeg" alt="" />
+      </Card>
+    </div>
+  </ul>
+</section>
+<!-- <style>
+  header {
+    color: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(30%, 200px, 100%), 1fr));
+    gap: 1rem;
+  }
+</style> -->
