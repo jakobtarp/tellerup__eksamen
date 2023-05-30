@@ -1,8 +1,8 @@
 ---
-import Button from "../components/Button.astro";
+
 import Singlepage from "../components/Singlepage.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import MainHeader from "../components/MainHeader.astro";
+
 ---
 
 <html lang="en">
@@ -16,7 +16,7 @@ import MainHeader from "../components/MainHeader.astro";
   <body>
     <MainLayout title="Cart" />
   
-    <main class="box">
+    <main class="px-5">
       <Singlepage
         type="Roman"
         title="Større end os"
@@ -39,11 +39,3 @@ import MainHeader from "../components/MainHeader.astro";
   </body>
 </html>
 
-<style>
-
-@media (min-width: 300px) {
-    .box {
-      padding-inline: 30px;
-    }
-  }
-</style>
