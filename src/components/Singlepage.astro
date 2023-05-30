@@ -4,6 +4,7 @@ import "../styles/tokens.css";
 import "../styles/global.css";
 import Button from "./Button.astro";
 ---
+
 <section>
   <div class="brødskrummer">
     <Button link="www.google.dk" variant="tertiary" style="red">Tellerup</Button>
@@ -18,7 +19,6 @@ import Button from "./Button.astro";
 <section class="">
   <article>
     <!-- Brødkrummer -->
-   
 
     <!-- Billede -->
     <div class="billede_container"><img class="billede" src={img} alt="produktbillede" height="350" width="350" /></div>
@@ -53,7 +53,7 @@ import Button from "./Button.astro";
             <img class="red_check" src="imgs/check.webp" alt="check" />
           </div>
         </div>
-      
+
         <div class="box">
           <div></div>
           <div class="info_format">
@@ -68,7 +68,7 @@ import Button from "./Button.astro";
             <!-- <img class="red_check" src="imgs/check.webp" alt="check" /> -->
           </div>
         </div>
-      
+
         <div class="box">
           <div></div>
           <div class="info_format">
@@ -77,14 +77,13 @@ import Button from "./Button.astro";
               <p>Lydbog</p>
               <p><strong>{pris_lydbog} DKK</strong></p>
             </div>
-            <p><s>{tidligere_pris_lydbog} </s></p>
+            <p><s>{tidligere_pris_lydbog}</s></p>
           </div>
           <div class="check">
             <!-- <img class="red_check" src="imgs/check.webp" alt="check" /> -->
           </div>
         </div>
       </div>
-      
     </div>
 
     <!-- Købknap -->
@@ -94,10 +93,9 @@ import Button from "./Button.astro";
         <input type="text" class="count" value="1" />
         <button class="plus">+</button>
       </div>
-      
 
       <!-- <img  src="imgs/shopping-cart.webp" width="20px"> -->
-      <Button class="flex" link="www.google.dk" variant="primary" size="big" style="white"> Læg i kurv</Button>
+      <Button class="flex" link="www.google.dk" variant="primary" size="big" style="white">Læg i kurv</Button>
       <div class="tilbage">
         <div class="lager">
           <div class="lager_box">
@@ -149,11 +147,10 @@ import Button from "./Button.astro";
 </section>
 
 <style>
- 
- h1 {
-  margin-block: 20px;
- }
- h3 {
+  h1 {
+    margin-block: 20px;
+  }
+  h3 {
     color: var(--ctaColorRed);
     font-weight: bold;
   }
@@ -166,8 +163,8 @@ import Button from "./Button.astro";
     padding-bottom: 5px;
   }
 
-  .title_format p{
-font-size: 16px;
+  .title_format p {
+    font-size: 16px;
   }
   section {
     display: grid;
@@ -184,7 +181,6 @@ font-size: 16px;
     align-items: center;
     gap: 15px;
     margin-block: 40px;
-
   }
 
   .arrow {
@@ -210,11 +206,11 @@ font-size: 16px;
   }
 
   .formater {
-   display: flex;
-   flex-direction: row;
-   margin-block: 20px;
-   gap: 20px;
-   flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    margin-block: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
   }
 
   .box {
@@ -230,15 +226,15 @@ font-size: 16px;
   }
 
   .info_format {
-display: flex;
-align-items: center;
-flex-direction: column;
-justify-content: center;
-text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
   }
-.border_active {
-  border-color: var(--ctaColorRed);
-}
+  .border_active {
+    border-color: var(--ctaColorRed);
+  }
   .check_active {
     background-color: var(--ctaColorRed);
     width: 20px;
@@ -248,7 +244,7 @@ text-align: center;
   }
 
   .check {
-   background-color:  var(--lightgrey);
+    background-color: var(--lightgrey);
     width: 20px;
     height: 20px;
     border-radius: 9999px;
@@ -304,75 +300,69 @@ text-align: center;
 
   .knapper {
     display: flex;
-   flex-direction: row;
-   align-items: center;
-   gap: 20px;
-   flex-wrap: wrap;
-    
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
   }
 
-.tilbage {
-  @media (max-width: 900px) {
-    order:-1;
+  .tilbage {
+    @media (max-width: 900px) {
+      order: -1;
+    }
   }
-}
 
   .quantity {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+  }
+
+  .quantity .count {
+    margin: 0 10px;
+    font-size: 18px;
+    width: 25px;
+    align-self: center;
+  }
+
+  .minus,
+  .plus {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #ccc;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .minus:hover,
+  .plus:hover {
+    background-color: #999;
+  }
+  .quantity input {
+    border: 0.5px solid #ccc;
+  }
+  .minus:active,
+  .plus:active {
+    background-color: #555;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .overskrift {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .overskrift h3 {
+      display: none;
+    }
+    .overskrift :first-child {
       display: flex;
-      align-items: center;
-      padding-left: 50px;
     }
 
-    .quantity .count {
-      margin: 0 10px;
-      font-size: 18px;
-      width: 25px;
-      align-self: center;
+    .quantity {
+      padding-left: 0;
+      justify-content: center;
     }
-
-    .minus,
-    .plus {
-      width: 30px;
-      height: 30px;
-      border: none;
-      background-color: #ccc;
-      color: #fff;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .minus:hover,
-    .plus:hover {
-      background-color: #999;
-    }
-    .quantity input {
-      border: 0.5px solid #ccc;
-    }
-    .minus:active,
-    .plus:active {
-      background-color: #555;
-    }
-
-    @media only screen and (max-width: 600px) {
-      .overskrift {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .overskrift h3 {
-        display: none;
-    }
-      .overskrift :first-child {
-        display: flex;
-      }
-
-
-      .quantity {
-        padding-left: 0;
-        justify-content: center;
-      }
-    }
-
-
-
-  
+  }
 </style>
